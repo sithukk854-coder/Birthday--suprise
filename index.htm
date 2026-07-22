@@ -2,101 +2,137 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Special Day 💖</title>
+<title>For Someone Special ❤️</title>
 
 <style>
-body {
-  margin: 0;
-  height: 100vh;
-  background: linear-gradient(#ffe6f0, #fff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffb6c1,#fff0f5);
+font-family:Arial,sans-serif;
+overflow:hidden;
 }
 
-.card {
-  background: white;
-  width: 85%;
-  padding: 30px;
-  border-radius: 25px;
-  text-align: center;
-  box-shadow: 0 0 25px pink;
+.box{
+background:white;
+padding:30px;
+width:85%;
+max-width:400px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 0 25px pink;
 }
 
-h1 {
-  color: #ff4d88;
-  animation: glow 2s infinite;
+h1{
+color:#ff4d88;
 }
 
-p {
-  color: #555;
-  font-size: 18px;
-  line-height: 1.7;
+p{
+color:#555;
+font-size:18px;
+line-height:1.6;
 }
 
-.heart {
-  position: absolute;
-  color: #ff6699;
-  animation: fall 5s linear infinite;
+button{
+background:#ff6699;
+color:white;
+border:0;
+padding:12px 25px;
+border-radius:25px;
+font-size:17px;
 }
 
-button {
-  background: #ff6699;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 20px;
-  font-size: 16px;
+.gift{
+font-size:70px;
+cursor:pointer;
 }
 
-@keyframes glow {
-  50% { text-shadow: 0 0 20px pink; }
+.heart{
+position:absolute;
+animation:fall 5s linear infinite;
 }
 
-@keyframes fall {
-  from { top: -10%; }
-  to { top: 110%; }
+@keyframes fall{
+from{top:-10%;}
+to{top:110%;}
+}
+
+.hidden{
+display:none;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
-<h1>For Someone Special 💖</h1>
+<div class="box" id="start">
+
+<h1>✨ I made something for you ❤️</h1>
 
 <p>
-ဒီနေ့က မင်းအတွက် အထူးနေ့လေးတစ်နေ့ပါ ❤️<br><br>
-
-မင်းနဲ့တွေ့ခွင့်ရခဲ့တာ၊
-မင်းရဲ့အပြုံးတွေ၊
-မင်းရဲ့ဂရုစိုက်မှုတွေကို ရရှိခဲ့တာက
-ငါ့အတွက် အမှတ်တရလေးတွေပါ။<br><br>
-
-မင်းဘဝမှာ ပျော်ရွှင်မှုတွေ အမြဲပြည့်နေပါစေ။
-မင်းလိုချင်တဲ့အိပ်မက်တွေ အကောင်အထည်ဖော်နိုင်ပါစေ။<br><br>
-
-မင်းပျော်နေတာကို မြင်ရတာက
-ငါ့အတွက်လည်း ပျော်ရွှင်မှုတစ်ခုပါ ❤️
+ဒီနေ့က သာမန်နေ့တစ်နေ့ မဟုတ်ဘူး...
 </p>
 
-<button onclick="alert('You are always special to me ❤️')">
-Open Message 💌
-</button>
+<div class="gift" onclick="openGift()">
+🎁
+</div>
+
+<p>
+လက်ဆောင်လေးဖွင့်ကြည့်ပါ 💖
+</p>
 
 </div>
 
+
+<div class="box hidden" id="message">
+
+<h1>🎂 Happy Birthday, My Love ❤️</h1>
+
+<p>
+ငါ့အတွက် အရေးကြီးဆုံးလူတစ်ယောက် ဒီလောကကြီးကို ရောက်လာခဲ့တဲ့ နေ့လေးပဲ။
+
+<br><br>
+
+မင်းဘဝမှာ ပျော်ရွှင်မှုတွေ အမြဲပြည့်နေပါစေ။
+မင်းလိုချင်တဲ့ အိပ်မက်တွေ အကောင်အထည်ဖော်နိုင်ပါစေ။
+
+<br><br>
+
+ဒီ Surprise လေးကို မင်းအတွက် အမှတ်တရဖြစ်အောင် လုပ်ထားတာပါ ❤️
+
+<br><br>
+
+From Si Thu ❤️
+</p>
+
+</div>
+
+
 <script>
-for(let i=0;i<20;i++){
- let h=document.createElement("div");
- h.innerHTML="❤️";
- h.className="heart";
- h.style.left=Math.random()*100+"%";
- h.style.animationDuration=(3+Math.random()*5)+"s";
- document.body.appendChild(h);
+
+function openGift(){
+
+document.getElementById("start").style.display="none";
+
+document.getElementById("message").style.display="block";
+
+for(let i=0;i<30;i++){
+
+let h=document.createElement("div");
+h.innerHTML="❤️";
+h.className="heart";
+h.style.left=Math.random()*100+"%";
+h.style.animationDuration=(2+Math.random()*5)+"s";
+
+document.body.appendChild(h);
+
 }
+
+}
+
 </script>
 
 </body>
