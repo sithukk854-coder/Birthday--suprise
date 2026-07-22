@@ -1,83 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday</title>
+<title>A Special Day 💖</title>
 
 <style>
-body{
-margin:0;
-padding:0;
-background:linear-gradient(135deg,#ff4d88,#ff99cc);
-font-family:Arial,sans-serif;
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-text-align:center;
-color:white;
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(#ffe6f0, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
-.card{
-background:rgba(255,255,255,0.15);
-padding:30px;
-border-radius:20px;
-backdrop-filter:blur(8px);
-box-shadow:0 0 20px rgba(255,255,255,.3);
+.card {
+  background: white;
+  width: 85%;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 0 25px pink;
 }
 
-h1{
-font-size:40px;
-animation:glow 2s infinite;
+h1 {
+  color: #ff4d88;
+  animation: glow 2s infinite;
 }
 
-p{
-font-size:20px;
-line-height:1.6;
+p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
-button{
-padding:15px 30px;
-font-size:18px;
-border:none;
-border-radius:30px;
-background:white;
-color:#ff4d88;
-cursor:pointer;
-font-weight:bold;
-transition:.3s;
+.heart {
+  position: absolute;
+  color: #ff6699;
+  animation: fall 5s linear infinite;
 }
 
-button:hover{
-transform:scale(1.08);
+button {
+  background: #ff6699;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  font-size: 16px;
 }
 
-@keyframes glow{
-0%{text-shadow:0 0 10px white;}
-50%{text-shadow:0 0 25px yellow;}
-100%{text-shadow:0 0 10px white;}
+@keyframes glow {
+  50% { text-shadow: 0 0 20px pink; }
+}
+
+@keyframes fall {
+  from { top: -10%; }
+  to { top: 110%; }
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="card">
-
-<h1>🎂 Happy Birthday 🎂</h1>
-
-<h2>💖 ကျော့သဇင်ခိုင် 💖</h2>
+<h1>For Someone Special 💖</h1>
 
 <p>
-ဒီနေ့က မင်းရဲ့ အပြုံးတွေ အမြဲတောက်ပနေပါစေ။<br><br>
+ဒီနေ့က မင်းအတွက် အထူးနေ့လေးတစ်နေ့ပါ ❤️<br><br>
 
-ကျန်းမာပျော်ရွှင်ပြီး<br>
-မင်းရဲ့ ဆန္ဒအားလုံး ပြည့်ဝပါစေ။<br><br>
+မင်းနဲ့တွေ့ခွင့်ရခဲ့တာ၊
+မင်းရဲ့အပြုံးတွေ၊
+မင်းရဲ့ဂရုစိုက်မှုတွေကို ရရှိခဲ့တာက
+ငါ့အတွက် အမှတ်တရလေးတွေပါ။<br><br>
 
-Happy Birthday ❤️
+မင်းဘဝမှာ ပျော်ရွှင်မှုတွေ အမြဲပြည့်နေပါစေ။
+မင်းလိုချင်တဲ့အိပ်မက်တွေ အကောင်အထည်ဖော်နိုင်ပါစေ။<br><br>
+
+မင်းပျော်နေတာကို မြင်ရတာက
+ငါ့အတွက်လည်း ပျော်ရွှင်မှုတစ်ခုပါ ❤️
 </p>
 
-<button
+<button onclick="alert('You are always special to me ❤️')">
+Open Message 💌
+</button>
+
+</div>
+
+<script>
+for(let i=0;i<20;i++){
+ let h=document.createElement("div");
+ h.innerHTML="❤️";
+ h.className="heart";
+ h.style.left=Math.random()*100+"%";
+ h.style.animationDuration=(3+Math.random()*5)+"s";
+ document.body.appendChild(h);
+}
+</script>
+
+</body>
+</html>
