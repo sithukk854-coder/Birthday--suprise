@@ -134,12 +134,20 @@ From Si Thu ❤️
 
 
 <script>
-
 function openGift(){
+
+let gift = document.querySelector(".gift");
+
+gift.style.transform = "scale(1.5) rotate(20deg)";
+
+setTimeout(function(){
 
 document.getElementById("start").style.display="none";
 
 document.getElementById("message").style.display="block";
+
+},500);
+
 
 for(let i=0;i<30;i++){
 
