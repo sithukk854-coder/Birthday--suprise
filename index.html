@@ -44,10 +44,20 @@ padding:12px 25px;
 border-radius:25px;
 font-size:17px;
 }
-
 .gift{
 font-size:70px;
 cursor:pointer;
+display:inline-block;
+animation:shake 1.2s infinite;
+}
+
+@keyframes shake{
+0%{transform:rotate(0deg);}
+20%{transform:rotate(-8deg);}
+40%{transform:rotate(8deg);}
+60%{transform:rotate(-8deg);}
+80%{transform:rotate(8deg);}
+100%{transform:rotate(0deg);}
 }
 
 .heart{
