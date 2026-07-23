@@ -44,40 +44,11 @@ padding:12px 25px;
 border-radius:25px;
 font-size:17px;
 }
+
 .gift{
-font-size:80px;
+font-size:70px;
 cursor:pointer;
-display:inline-block;
-animation:shake 0.8s infinite;
-transition:all 0.5s ease;
-filter:drop-shadow(0 0 10px gold);
 }
-
-.gift.open{
-animation:none;
-transform:scale(1.8) rotate(20deg);
-filter:drop-shadow(0 0 35px gold);
-}
-@keyframes shake{
-0%{
-transform:rotate(0deg);
-}
-25%{
-transform:rotate(15deg);
-}
-50%{
-transform:rotate(0deg);
-}
-75%{
-transform:rotate(-15deg);
-}
-100%{
-transform:rotate(0deg);
-}
-}
-
-
-
 
 .heart{
 position:absolute;
@@ -105,13 +76,9 @@ display:none;
 ဒီနေ့က သာမန်နေ့တစ်နေ့ မဟုတ်ဘူး...
 </p>
 
-<div class="gift" onclick="openGift
-  <div class="lid"></div>
-  <div class="box-body"></div>
-  <div class="ribbon-v"></div>
-  <div class="ribbon-h"></div>
+<div class="gift" onclick="openGift()">
+🎁
 </div>
-
 
 <p>
 လက်ဆောင်လေးဖွင့်ကြည့်ပါ 💖
@@ -129,7 +96,7 @@ display:none;
 
 <br><br>
 
-ခလေးဘဝမှာ ပျော်ရွှင်မှုတွေ အမြဲပြည့်နေပါစေ။
+‌ခ‌ေလးဘဝမှာ ပျော်ရွှင်မှုတွေ အမြဲပြည့်နေပါစေ။
 ခလေးလိုချင်တဲ့ အိပ်မက်တွေ အကောင်အထည်ဖော်နိုင်ပါစေ။
 
 <br><br>
@@ -139,19 +106,18 @@ display:none;
 <br><br>
 
 From Si Thu ❤️
-</p><script>
+</p>
+
+</div>
+
+
+<script>
+
 function openGift(){
 
-let gift = document.querySelector(".gift");
-
-gift.classList.add("open");
-
-setTimeout(function(){
-
 document.getElementById("start").style.display="none";
-document.getElementById("message").style.display="block";
 
-},500);
+document.getElementById("message").style.display="block";
 
 for(let i=0;i<30;i++){
 
@@ -166,8 +132,8 @@ document.body.appendChild(h);
 }
 
 }
+
 </script>
 
 </body>
 </html>
-ယ
